@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A gentle little space with love, hugs, and sweet reminders for your heart." />
+  <title>Cutu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" href="assets/cutecursor.gif" as="image" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+  <style>
+  html, body, *, *::before, *::after {
+  cursor: url('assets/cutecursor.gif') 0 0, auto !important;
+  cursor: url('assets/cutecursor.gif') 16 16, auto;
+  }
+  button, a, input, textarea {
+    cursor: url('assets/cutecursor.gif') 16 16, auto !important;
+  }
+  
+  #displayArea div {
+    animation: fadeIn 0.4s ease-in-out;
+    font-family: 'Comfortaa', cursive;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .trail-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle, rgba(255,192,203,0.5) 0%, rgba(255,182,193,0.3) 50%, transparent 70%);
+  box-shadow: 0 0 4px 1px rgba(255, 192, 203, 0.4);
+  animation: fadeTrail 0.8s forwards;
+  }
+
+  @keyframes fadeTrail {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  </style>
+
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-pink-100 text-center px-4">
+
+  <!-- Wrapper -->
+  <div class="flex flex-col items-center justify-center min-h-screen space-y-6">
+
+    <!-- Card -->
+    <div class="bg-white rounded-2xl p-8 shadow-xl w-full max-w-lg min-h-[300px] transition-all duration-500 ease-in-out flex flex-col items-center justify-center animate__animated animate__fadeInDown">
+
+      
+      <h1 id="typingHeading" class="text-4xl font-bold text-pink-500 mb-4"></h1>
+
+      <p class="text-lg text-gray-800 mb-6">
+        This space exists to remind you, no matter what you’re going through, you are deeply loved, truly valued, and never alone. You matter more than you think.
+      </p>
+
+      <div class="flex flex-col space-y-4 mb-6 w-full px-2">
+       <button id="messageBtn" class="bg-pink-400 text-white py-3 px-6 rounded-full text-lg w-full shadow-md hover:shadow-pink-400/70 hover:shadow-xl hover:ring-4 hover:ring-pink-200 transition duration-300 ease-in-out">
+       💌 Click me whenever you need a little love. I’ll be right here. 
+       </button>
+
+       <button id="hugBtn" class="bg-purple-400 text-white py-3 px-6 rounded-full text-lg w-full shadow-md hover:shadow-purple-400/70 hover:shadow-xl hover:ring-4 hover:ring-purple-200 transition duration-300 ease-in-out">
+       🧸 Tap me for a virtual hug — no questions asked
+       </button>
+
+      </div>
+
+      <div id="displayArea" class="min-h-[120px] transition-all duration-300 ease-in-out text-lg text-gray-800 space-y-4 w-full"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-sm text-gray-600 mt-4">
+      <div class="text-sm">
+        Made with 💗 by <span class="font-semibold text-pink-500">Bhutki</span>. <br />
+        <span class="font-indie text-lg text-pink-400 italic">"You are more loved than you know."</span>
+      </div>
+    </footer>
+  </div>
+
+  <audio id="dingSound" src="assets/ding.mp3" preload="auto" playsinline></audio>
+  <audio id="hugSound" src="assets/hugsound.mp3" preload="auto" playsinline></audio>
+  <script>
+  const heading = document.getElementById("typingHeading");
+  const message = "HII CUTU!!";
+  let i = 0;
+
+  function typeHeading() {
+    if (i < message.length) {
+      heading.innerHTML += message.charAt(i);
+      i++;
+      setTimeout(typeHeading, 100); // Typing speed
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", typeHeading);
+  </script>
+  <script src="script.js"></script>
+  <script>
+  document.addEventListener('mousemove', function(e) {
+    const dot = document.createElement('div');
+    dot.classList.add('trail-dot');
+    dot.style.left = `${e.clientX}px`;
+    dot.style.top = `${e.clientY}px`;
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 600); // Remove after animation
+  });
+  </script>
+  </body>
+</html>
