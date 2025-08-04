@@ -6,7 +6,7 @@ const messages = [
   "Even if today felt heavy, you still carried yourself through it. That matters more than you know.", 
   "You’re not behind. You’re just on your own path, walking at your own pace. I believe in that pace, and I believe in you.",
    "There’s nothing wrong with needing rest or comfort. That doesn’t make you weak, you’re still strong, still worthy, always.",
-   "You don’t have to feel okay all the time to be doing okay. I see the quiet ways you’re healing, even when you can’t",
+   "You don’t have to feel okay all the time to be doing okay. I see the quiet ways you’re healing, even when you can’t.",
    "Some days you bloom, other days you just breathe. Both are important. Both are beautiful. I am here for both.",
    "You don’t always have to be strong. It’s okay to soften. Let yourself rest. I’ve got you.",
    "You don’t owe anyone an explanation for your tiredness. Life gets heavy. Just surviving it is already a lot and I’m proud of you.",
@@ -33,11 +33,11 @@ const messages = [
    "You matter to me in ways I can’t always put into words. Just wanted you to know I’m so glad you're part of my world.",
    "You are loved, even when you can’t feel it. I’m here, holding that love for you until you can see it again.",
    "You don’t have to have it all together to be loved. You’re allowed to struggle and I’ll hold you together for a while if you need.",
-   "Even if you don’t see it, I do, you’re still showing up, still trying, and that matters. You’re doing better than you think",
+   "Even if you don’t see it, I do, you’re still showing up, still trying, and that matters. You’re doing better than you think.",
    "You’ve made it through things you thought would break you. And here you are. That’s something I admire every single day.",
    "Even if it feels small, the effort you’re giving matters. You’re doing your best and that’s more than enough for me.",
    "Even when it’s quiet and everything feels far away, you’re not alone. I’m here. Always.",
-   "You haven’t lost any part of yourself that matters even if the light feels dim, it’s still there. So are you"
+   "You haven’t lost any part of yourself that matters even if the light feels dim, it’s still there. So are you."
 ];
 
 
