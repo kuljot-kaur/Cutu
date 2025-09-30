@@ -1,6 +1,6 @@
 # 🌸 Hii Cutu 💖 – A Comforting Webspace
 
-This project is a soft, cozy corner of the internet built with love and kindness – designed to comfort someone special and let them know they're always loved, seen, and cared for.
+This project is a soft, cozy corner of the internet built with love and kindness – designed to comfort someone and let them know they're always loved, seen, and cared for.
 
 ## 💡 Features
 
